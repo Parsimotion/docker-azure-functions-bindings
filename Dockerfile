@@ -11,6 +11,6 @@ RUN apt-get update && \
 	rm -rf /var/lib/apt/lists/*
 
 RUN npm install -g azure-functions-core-tools@core --unsafe-perm true && \
-    func init --docker --worker-runtime=node && \
+    func init --worker-runtime=node && \
     func extensions install -p Microsoft.Azure.WebJobs.Extensions.ServiceBus -v 3.0.2 && \
     func extensions install -p Microsoft.Azure.WebJobs.Extensions -v 3.0.1
