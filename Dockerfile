@@ -13,6 +13,7 @@ RUN apt-get update && \
 RUN npm install -g azure-functions-core-tools@core --unsafe-perm true && \
     func init --worker-runtime=node && \
     func extensions install -p Microsoft.Azure.WebJobs.Extensions.ServiceBus -v 3.0.2 && \
+    func extensions install -p Microsoft.Azure.WebJobs.Extensions.Storage -v 3.0.3 && \
     func extensions install -p Microsoft.Azure.WebJobs.Extensions -v 3.0.1
 
 FROM mcr.microsoft.com/azure-functions/node:2.0
