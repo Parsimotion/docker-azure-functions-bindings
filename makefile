@@ -1,6 +1,6 @@
 APP=azure-functions-bindings
 REGISTRY_PREFIX = docker
-LAST_COMMIT=1.2
+LAST_COMMIT=1.3
 IMAGE = $(APP):$(LAST_COMMIT)
 
 deploy: build-image upload-acr
